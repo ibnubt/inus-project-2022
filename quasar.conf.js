@@ -51,7 +51,7 @@ module.exports = configure(function (ctx) {
       // transpile: false,
       publicPath: '/airsale/',
       appBase: '/airsale/',
-      vueRouterBase: '/airsale/',
+      // vueRouterBase: '/airsale/',
       // Add dependencies for transpiling with Babel (Array of string/regex)
       // (from node_modules, which are by default not transpiled).
       // Applies only if "transpile" is set to true.
@@ -80,7 +80,7 @@ module.exports = configure(function (ctx) {
         type: 'http'
       },
       port: 8080,
-      open: false // opens browser window automatically
+      open: true // opens browser window automatically
     },
 
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-framework
