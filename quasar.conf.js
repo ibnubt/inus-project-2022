@@ -50,7 +50,7 @@ module.exports = configure(function (ctx) {
 
       // transpile: false,
       // publicPath: '/airsale/',
-      // appBase: '/airsale/',
+      appBase: '/airsale/',
       // vueRouterBase: '/airsale/',
       // Add dependencies for transpiling with Babel (Array of string/regex)
       // (from node_modules, which are by default not transpiled).
