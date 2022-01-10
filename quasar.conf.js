@@ -49,13 +49,9 @@ module.exports = configure(function (ctx) {
       vueRouterMode: 'history', // available values: 'hash', 'history'
 
       // transpile: false,
-      publicPath: '/airsale/',
+      // publicPath: '/',
+      appBase: '/airsale/',
       vueRouterBase: '/airsale/',
-      chainWebpack(cfg) {
-          cfg.output.publicPath('/airsale/');
-      },
-      appBase: "",
-
       // Add dependencies for transpiling with Babel (Array of string/regex)
       // (from node_modules, which are by default not transpiled).
       // Applies only if "transpile" is set to true.
@@ -72,10 +68,10 @@ module.exports = configure(function (ctx) {
 
       // https://quasar.dev/quasar-cli/handling-webpack
       // "chain" is a webpack-chain object https://github.com/neutrinojs/webpack-chain
-      // chainWebpack (chain) {
-      //   chain.plugin('eslint-webpack-plugin')
-      //     .use(ESLintPlugin, [{ extensions: [ 'js', 'vue' ] }])
-      // },
+      chainWebpack (chain) {
+        chain.plugin('eslint-webpack-plugin')
+          .use(ESLintPlugin, [{ extensions: [ 'js', 'vue' ] }])
+      },
     },
 
     // Full list of options: https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-devServer
