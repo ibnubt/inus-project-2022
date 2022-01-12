@@ -49,7 +49,7 @@ module.exports = configure(function (ctx) {
       vueRouterMode: 'history', // available values: 'hash', 'history'
 
       // transpile: false,
-      // publicPath: '/',
+      publicPath: '',
       // appBase: '/airsale/',
       // vueRouterBase: '/airsale/',
       // Add dependencies for transpiling with Babel (Array of string/regex)
